@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>test gulp webapp</title>
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- build:css styles/index_main.css -->   //这个注释的意思是 将两个css合并成一个index_main.css 注意顺序
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+  </head>
+  <body>
+  
+    <div class="container">
+      <div class="header">
+        <ul class="nav nav-pills pull-right">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <h3 class="text-muted">Hello</h3>
+      </div>
+
+      <div class="jumbotron">
+        <h1>Hello Gulp!</h1>
+        <p class="lead">Always a pleasure scaffolding your apps.</p>
+        <p><a class="btn btn-lg btn-success" href="#">Splendid!</a></p>
+      </div>
+
+      <div class="row marketing">
+        <div class="col-lg-6">
+          <h4>HTML5 Boilerplate</h4>
+          <p>HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.</p>
+          
+          <h4>Sass</h4>
+          <p>Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.</p>
+          
+          <h4>Bootstrap</h4>
+          <p>Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.</p>
+          <h4>Modernizr</h4>
+          <p>Modernizr is an open-source JavaScript library that helps you build the next generation of HTML5 and CSS3-powered websites.</p>
+          
+        </div>
+      </div>
+
+      <div class="footer">
+        <p>♥ from the Yeoman team</p>
+      </div>
+    </div>
+    
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    
+
+    <!-- build:js scripts/vendor.js --> //将以下js合并成一个，并更名为vendor.js
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <!-- endbuild -->
+    
+    <!-- build:js scripts/plugins.js --> //注意一下这里 待会会按照顺序变成一个plugins.js文件
+     //是否遇到过这么多的插件引用，Ctrl+c Ctrl+v 还要细致的修改  请留意 wiredep 任务  留意下面的<!-- bower:js --><!-- endbower -->注释，这可不是随随便便的注释
+    <!-- bower:js -->
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
+    <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    
+    <!-- build:js scripts/index_main.js -->   
+    <script src="scripts/index.js"></script>
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>

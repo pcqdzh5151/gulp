@@ -1,0 +1,23 @@
+{
+  "name": "gulp_test",
+  "authors": [
+    "QRL"
+  ],
+  "keywords": [
+    "bower_components"
+  ],
+  "private": true,
+  "devDependencies": {
+    "jquery": "^3.0.0"
+  },
+  "overrides": {
+    "bootstrap-sass": {
+      "main": [
+        "assets/stylesheets/_bootstrap.scss",
+        "assets/fonts/bootstrap/*",
+        "assets/javascripts/bootstrap.js"
+      ]
+    }
+  },
+  "dependencies": {"bootstrap-sass": "^3.3.6"}
+}

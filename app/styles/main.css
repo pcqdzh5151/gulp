@@ -1,0 +1,210 @@
+.triangle-right {
+  height: 0;
+  width: 0px;
+  border-bottom: 4px solid #9093A4;
+  border-right: 2px solid transparent; }
+
+.triangle-left {
+  height: 0;
+  width: 0px;
+  border-bottom: 4px solid #9093A4;
+  border-left: 2px solid transparent; }
+
+.title-color {
+  color: #AAACB8; }
+
+.underline {
+  text-decoration: underline; }
+
+.lose {
+  color: #fd1415; }
+
+.win {
+  color: #008000; }
+
+.table-tab {
+  display: table;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px; }
+
+.table-cell {
+  display: table-cell;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  vertical-align: middle; }
+
+.countByWeek-list .app-head {
+  position: absolute;
+  z-index: 1000;
+  border-width: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  margin: 0; }
+  .countByWeek-list .app-head .nav-tabs {
+    border-bottom: none; }
+    .countByWeek-list .app-head .nav-tabs .item {
+      text-align: center;
+      background-color: #ffffff;
+      height: 40px;
+      vertical-align: middle;
+      line-height: 14px;
+      color: #5c5c5c;
+      border-bottom: solid 1px #dfdfdf;
+      border-left: solid 1px #dfdfdf; }
+      .countByWeek-list .app-head .nav-tabs .item:first-child {
+        border-left: none; }
+      .countByWeek-list .app-head .nav-tabs .item.active {
+        background-color: white;
+        border-bottom: 1px solid #28b96c;
+        color: #28b96c;
+        box-shadow: inset 0px -1px 0px 0px #28b96c; }
+  .countByWeek-list .app-head .m-table {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 12px;
+    background-color: #fafafa;
+    color: #5c5c5c; }
+    .countByWeek-list .app-head .m-table tr td {
+      padding: 0px;
+      line-height: 12px;
+      height: 30px; }
+
+.countByWeek-list .app-content {
+  padding-top: 45px; }
+  .countByWeek-list .app-content .box {
+    width: 100%;
+    height: 100%; }
+  .countByWeek-list .app-content .boxtable {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    padding-top: 3px; }
+    .countByWeek-list .app-content .boxtable .boxhead {
+      width: 100%;
+      overflow: hidden; }
+      .countByWeek-list .app-content .boxtable .boxhead .boxtitle {
+        height: 46px;
+        padding: 5px 0;
+        color: #1e201e;
+        background: #fafafa;
+        border-right: 1px solid #d4d4d4;
+        border-top: 1px solid #d4d4d4;
+        border-bottom: 1px solid #d4d4d4; }
+        .countByWeek-list .app-content .boxtable .boxhead .boxtitle:last-of-type {
+          border-right: 0px none #fff; }
+        .countByWeek-list .app-content .boxtable .boxhead .boxtitle span {
+          display: inline-block;
+          width: 100%;
+          height: 18px;
+          float: left; }
+    .countByWeek-list .app-content .boxtable .boxcontent {
+      width: 100%;
+      height: 40px; }
+      .countByWeek-list .app-content .boxtable .boxcontent .boxcell {
+        color: #5c5c5c;
+        height: 100%;
+        padding: 3px 0;
+        background: #fafafa;
+        border-right: 1px solid #e4e3f1;
+        border-bottom: 1px solid #e4e3f1; }
+        .countByWeek-list .app-content .boxtable .boxcontent .boxcell:last-of-type {
+          border-right: 0px none #fff; }
+        .countByWeek-list .app-content .boxtable .boxcontent .boxcell span {
+          display: block;
+          height: 16px;
+          line-height: 18px; }
+      .countByWeek-list .app-content .boxtable .boxcontent:nth-of-type(even) .boxcell {
+        background: #fff; }
+
+.countByDetail-list .search {
+  position: absolute;
+  background-color: #f4f4f4;
+  padding: 0px 10px 0px 10px;
+  width: 100%;
+  height: 40px;
+  z-index: 1px;
+  color: #282a29; }
+  .countByDetail-list .search .acc-time {
+    font-size: 16px; }
+  .countByDetail-list .search .acc-week {
+    font-size: 16px;
+    background: #84BB8C;
+    color: #ffffff;
+    padding: 0px 3px; }
+  .countByDetail-list .search .sea {
+    line-height: 40px;
+    font-size: 16px;
+    padding: 0px 5px 0px 5px; }
+    .countByDetail-list .search .sea .ico-check {
+      color: #28b96c; }
+  .countByDetail-list .search .right {
+    text-align: right; }
+  .countByDetail-list .search .icon-gouxuan1, .countByDetail-list .search .icon-gouxuan2 {
+    font-size: 18px; }
+
+.countByDetail-list .tab {
+  width: 100%; }
+  .countByDetail-list .tab .center {
+    text-align: center; }
+  .countByDetail-list .tab .treven {
+    background-color: #ffffff; }
+  .countByDetail-list .tab .trodd {
+    background-color: #fafafa; }
+  .countByDetail-list .tab .bor-top {
+    border-top: 1px solid #dedede; }
+  .countByDetail-list .tab .bor-left {
+    border-left: 1px solid #dedede; }
+  .countByDetail-list .tab .bor-right {
+    border-right: 1px solid #dedede; }
+  .countByDetail-list .tab .bor-bot {
+    border-bottom: 1px solid #dedede; }
+
+.countByDetail-list .detail {
+  width: 100%;
+  height: 100%;
+  padding: 40px 0px 0px 0px;
+  background: #fff; }
+  .countByDetail-list .detail .detail-title {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    z-index: 2; }
+    .countByDetail-list .detail .detail-title .title-tr {
+      font-size: 1.2em;
+      height: 43px;
+      padding-top: 0px;
+      padding-left: 0px;
+      line-height: 43px; }
+      .countByDetail-list .detail .detail-title .title-tr .help {
+        position: absolute;
+        font-size: 1.3em;
+        z-index: 1;
+        line-height: 43px;
+        margin-left: 5px;
+        padding-right: 15px;
+        color: #28b96c; }
+  .countByDetail-list .detail .detail-body {
+    width: 100%;
+    height: 100%;
+    padding-top: 44px; }
+  .countByDetail-list .detail .body-tr {
+    height: 78px;
+    overflow: hidden; }
+    .countByDetail-list .detail .body-tr .del {
+      padding-left: 10px; }
+    .countByDetail-list .detail .body-tr .bet-back .bet {
+      padding-left: 7px;
+      width: 100%;
+      height: 50%;
+      line-height: 38px; }
+    .countByDetail-list .detail .body-tr .bet-back .back {
+      padding-left: 7px;
+      width: 100%;
+      height: 50%;
+      line-height: 39px; }
+    .countByDetail-list .detail .body-tr .winlose {
+      padding-left: 10px; }

@@ -1,0 +1,51 @@
+.m-limit .app-head {
+  position: absolute;
+  z-index: 1000;
+  border-width: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  margin: 0; }
+  .m-limit .app-head .nav-tabs {
+    border-bottom: none; }
+    .m-limit .app-head .nav-tabs .item {
+      text-align: center;
+      background-color: #ffffff;
+      line-height: 40px;
+      color: #5c5c5c;
+      border-bottom: solid 1px #dfdfdf;
+      border-left: solid 1px #dfdfdf; }
+      .m-limit .app-head .nav-tabs .item:first-child {
+        border-left: none; }
+      .m-limit .app-head .nav-tabs .item.active {
+        background-color: white;
+        border-bottom: 1px solid #28b96c;
+        color: #28b96c;
+        box-shadow: inset 0px -1px 0px 0px #28b96c; }
+  .m-limit .app-head .m-table {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 12px;
+    background-color: #fafafa;
+    color: #5c5c5c; }
+    .m-limit .app-head .m-table tr td {
+      padding: 0px;
+      line-height: 12px;
+      height: 30px; }
+
+.m-limit .app-content {
+  padding-top: 81px; }
+  .m-limit .app-content .scrollable-con .content .m-table .odd {
+    background-color: #fafafa; }
+    .m-limit .app-content .scrollable-con .content .m-table .odd td {
+      background-color: #fafafa;
+      padding: 1px; }
+  .m-limit .app-content .scrollable-con .content .m-table td.odd {
+    background-color: #fafafa; }
+  .m-limit .app-content .scrollable-con .content .m-table td.even {
+    background-color: #ffffff; }
+  .m-limit .app-content .scrollable-con .content .m-table .even {
+    background-color: #ffffff; }
+    .m-limit .app-content .scrollable-con .content .m-table .even td {
+      background-color: #ffffff;
+      padding: 1px; }
