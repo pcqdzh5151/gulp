@@ -39,7 +39,7 @@ gulp.task('scripts', ()=>{
     return gulp.src(paths.src+'/scripts/*.js')
         .pipe($.babel())
         .pipe(gulp.dest(paths.dist+'/scripts'));
-})
+});
 
 //压缩图片
 gulp.task('images', ()=>{
@@ -63,7 +63,7 @@ gulp.task('html', ()=>{
     var version = (new Date).valueOf() + '';
     var options = {
         removeComments: false,//清除HTML注释
-        collapseWhitespace: true,//压缩HTML
+        collapseWhitespace: false,//压缩HTML
         collapseBooleanAttributes: false,//省略布尔属性的值 <input checked="true"/> ==> <input />
         removeEmptyAttributes: false,//删除所有空格作属性值 <input id="" /> ==> <input />
         removeScriptTypeAttributes: false,//删除<script>的type="text/javascript"
@@ -104,4 +104,5 @@ gulp.task('serve', ['sass','scripts'], ()=>{
 
     gulp.watch('app/styles/*.scss', ['sass']); //监听文件变化  执行指定任务
     gulp.watch('app/scripts/*.js', ['scripts']);
-})
+});
+
