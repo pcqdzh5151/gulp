@@ -18,7 +18,7 @@ gulp.task('clean', ()=> {
         .pipe($.clean());
 });
 
-gulp.task('build', ['lint']);
+gulp.task('build', ['lint','sass','scripts','images','html']);
 
 gulp.task('default', ['clean'], ()=> {
     return gulp.run('build');
@@ -59,7 +59,7 @@ gulp.task('lint', ()=>{
 });
 
 //压缩
-gulp.task('html', ['sass','scripts'], ()=>{
+gulp.task('html', ()=>{
     var version = (new Date).valueOf() + '';
     var options = {
         removeComments: false,//清除HTML注释
@@ -71,12 +71,37 @@ gulp.task('html', ['sass','scripts'], ()=>{
         minifyJS: false,//压缩页面里的JS
         minifyCSS: false//压缩页面里的CSS
     };
-    return gulp.src(paths.src+'/*.html')
+    return gulp.src('app/*.html')
         .pipe($.plumber())
-        .pipe($.useref({searchPath: ['app','.']}))
-        .pipe($.if('*.js', $.uglify()))
+        .pipe($.useref({searchPath: ['app', '.']}))  //将页面上 <!--endbuild--> 根据上下顺序合并
+        .pipe($.if(paths.src+'/scripts/*.js', $.uglify()))
         .pipe($.if('*.css', $.cssnano()))
-        .pipe($.if('*.html',$.htmlmin(options)))
-        // .pipe($.replace('.js"></script>' , '.js?v=' + version + '"></script>'))
+        .pipe($.if('*.html', $.htmlmin(options)))
+        .pipe($.replace('.js"></script>' , '.js?v=' + version + '"></script>'))   //这种方法比较不成熟 每一次的任务都会改变，不管文件是否被修改 
+        .pipe($.replace('.css">' , '.css?v=' + version + '">'))
         .pipe(gulp.dest('dist'));
 });
+
+//本地建站 自动刷新
+gulp.task('serve', ['sass','scripts'], ()=>{
+    browserSync({
+        notify: true,
+        port: 9000,
+        server: {
+            baseDir: ['app'],
+            routes: {
+                '/bower_components': 'bower_components'
+            }
+        }
+    });
+
+    gulp.watch([
+        'app/index.html',
+        'app/images/*',
+        'app/styles/*.css',
+        'app/scripts/*.js'
+    ]).on('change',reload);
+
+    gulp.watch('app/styles/*.scss', ['sass']); //监听文件变化  执行指定任务
+    gulp.watch('app/scripts/*.js', ['scripts']);
+})
